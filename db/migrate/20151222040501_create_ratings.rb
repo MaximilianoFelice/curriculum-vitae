@@ -3,7 +3,7 @@ class CreateRatings < ActiveRecord::Migration
     create_table :ratings do |t|
       t.integer :level, null: false
       t.string :title, null: false
-      t.string :description, null: false
+      t.string :description
       t.timestamps null: false
     end
   end

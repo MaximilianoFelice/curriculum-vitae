@@ -2,5 +2,5 @@ class Rating < ActiveRecord::Base
   #
   # => Validations
   #
-  validates :level, :title, :description, presence: true
+  validates :level, :title, presence: true
 end

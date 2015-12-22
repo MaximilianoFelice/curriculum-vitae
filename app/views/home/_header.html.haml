@@ -1,4 +1,4 @@
-%nav.navbar.navbar-default
+%nav.navbar.navbar-default.padding-remover.box-shadow-bottom
   .container-fluid
     / Brand and toggle get grouped for better mobile display
     .navbar-header
@@ -11,7 +11,8 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         - {timeline: root_path, profile: profile_path}.each do |key, link|
-          %li
+          - active = current_page?(link)
+          %li{class: active ? 'active' : ''}
             = link_to t(".#{key}"), link
     / /.navbar-collapse
   / /.container-fluid

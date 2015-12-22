@@ -35,6 +35,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Friendlier HTML Syntax
 gem 'haml'
 
+# Admin Panel
+gem "admin", path: "admin"
+
+# Bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

@@ -7,9 +7,9 @@
   .info
     .row.user
       .col-xs-12.col-md-8
-        NAME
+        = @user.full_name
       .col-xs-12.col-md-4
-        AGE
+        = @user.age
     .row
       .col-xs-12
         %p= @user.description

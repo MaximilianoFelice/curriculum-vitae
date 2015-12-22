@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @user = User.first
+    @user = User.first.decorate
   end
 
   def profile
-    @user = User.first
+    @user = User.first.decorate
   end
 end

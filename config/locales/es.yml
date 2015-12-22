@@ -49,3 +49,7 @@ es:
   date:
     formats:
       long: ! "%d/%m/%Y %H:%M"
+  generic:
+    age:
+      one: "%{count} año"
+      other: "%{count} años"

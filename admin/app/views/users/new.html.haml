@@ -1,0 +1,13 @@
+= render partial: "breadcrumb"
+
+= render partial: "errors", locals: { errors: @resource.errors }
+
+= form_for @resource do |f|
+  - @resource_service.attrs_for_form.each do |attribute|
+    - if f.object.send(attribute.to_sym).is_a?(CarrierWave::Uploader::Base)
+      = f.file_field attribute
+    - elsif f.object.class.reflect_on_association(attribute)
+      = f.association attribute
+    - else
+      = f.input attribute
+  = f.submit

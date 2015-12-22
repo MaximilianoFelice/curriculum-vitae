@@ -10,6 +10,11 @@ class User < ActiveRecord::Base
   has_many :expertise_entries
   has_many :timeline_entries
 
+  #
+  # => Carrierwave dependencies
+  #
+  mount_uploader :profile_picture, AvatarUploader
+
   def to_s
     [first_name, second_name, last_name].compact.join(' ')
   end

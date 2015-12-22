@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   #     end
   #   end
 
+  get 'profile' => 'home#profile'
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

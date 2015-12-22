@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222040501) do
+ActiveRecord::Schema.define(version: 20151222041509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "expertise_entries", force: :cascade do |t|
+    t.string   "label",      null: false
+    t.integer  "rating_id",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "expertise_entries", ["rating_id"], name: "index_expertise_entries_on_rating_id", using: :btree
 
   create_table "ratings", force: :cascade do |t|
     t.integer  "level",       null: false

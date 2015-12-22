@@ -1,0 +1,16 @@
+/ .row
+/   .col-sm-1.hidden-xs
+/   .col-sm-10.col-xs-12.profile-info
+.profile-info
+  .picture<>= image_tag @user.profile_picture_url(:show)
+  / .picture
+  .info
+    .row.user
+      .col-xs-12.col-md-8
+        NAME
+      .col-xs-12.col-md-4
+        AGE
+    .row
+      .col-xs-12
+        %p= @user.description
+  / .col-sm-1.hidden-xs

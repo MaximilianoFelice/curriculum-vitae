@@ -19,3 +19,7 @@
 # Ignore Sublime projects
 *.sublime-project
 *.sublime-workspace
+
+# Ignore uploads
+/public/uploads
+/public/source_maps

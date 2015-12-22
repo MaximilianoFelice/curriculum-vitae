@@ -5,6 +5,6 @@ class Rating < ActiveRecord::Base
   validates :level, :title, presence: true
 
   def to_s
-    "Level #{level}"
+    title
   end
 end

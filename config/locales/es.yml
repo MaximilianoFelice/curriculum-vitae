@@ -46,3 +46,6 @@ es:
     datetimepickers:
       datepicker: ! "%d/%m/%Y"
       datetimepicker: ! "%d/%m/%Y %H:%M"
+  date:
+    formats:
+      long: ! "%d/%m/%Y %H:%M"

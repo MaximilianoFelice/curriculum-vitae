@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   #
   has_many :expertise_entries
   has_many :timeline_entries
+
+  def to_s
+    [first_name, second_name, last_name].compact.join(' ')
+  end
 end

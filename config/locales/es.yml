@@ -3,6 +3,13 @@ es:
     header:
       timeline: Timeline
       profile: Perfil
+  timeline:
+    title:
+      education: Formación Académica
+      work: Experiencia Laboral
+    date_range:
+      with_limit: "%{lower} - %{upper}"
+      without_limit: "%{year} - Actualidad"
   godmin:
     title: Godmin
     batch_actions:

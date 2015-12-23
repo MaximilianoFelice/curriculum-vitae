@@ -1,3 +1,5 @@
 = render 'home/profile_info'
 .separator
-= render 'home/timeline'
+- @user.timeline_entries.group_by(&:category).each do |category, entries| 
+  = render 'home/timeline', entries: entries, category: category
+  .separator

@@ -1,27 +1,17 @@
+= t("timeline.title.#{category}")
 #timeline.timeline-container
   %br.clear
-  .timeline-wrapper
-    .row
-      .col-xs-4
-        %h2.timeline-time 1990-2000
-      .col-xs-8
-        %dl.timeline-series
-          %dt#event01.timeline-event
-            %a Event
-          %dd#event01EX.timeline-event-content
-            %p Content about the event goes here.
-          %dt#event02.timeline-event
-            %a Another Event
-          %dd#event02EX.timeline-event-content
-            %p Content about the other event.
-  .timeline-wrapper
-    .row
-      .col-xs-4
-        %h2.timeline-time 1984
-      .col-xs-8
-        %dl.timeline-series
-          %dt#event03.timeline-event
-            %a Yet Another Event
-          %dd#event03EX.timeline-event-content
-            %p Content about the event goes here.
+  - TimelineEntryDecorator.decorate_collection(entries).group_by{ |entry| entry.date_range }.each do |range, ranged_entries|
+    .timeline-wrapper
+      .row
+        .col-xs-4
+          %h2.timeline-time= range
+        .col-xs-8
+          - ranged_entries.each_with_index do |entry, index|
+            - index += 1
+            %dl.timeline-series
+              %dt.timeline-event{id: "event#{index + 1}"}
+                %a= entry.title
+              %dd.timeline-event-content{id: "event#{index + 1}EX"}
+                %p= entry.content
   %br.clear

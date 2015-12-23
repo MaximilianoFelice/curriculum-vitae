@@ -13,7 +13,7 @@ class TimelineEntry < ActiveRecord::Base
   private
 
   def range_xor_year
-    unless to.blank? ^ year.blank?
+    unless from.blank? ^ year.blank?
       errors.add(:base, "Specify a year or a range, not both")
     end
   end

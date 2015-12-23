@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title Curriculum Vitae
+    = wicked_pdf_stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = wicked_pdf_javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = content_tag :meta, "", name: "viewport", content: "width=devise-width, initial-scale=1"  
+  %body
+    .container-fluid
+      .page-body
+        %div
+          = yield

@@ -14,5 +14,6 @@
           - active = current_page?(link)
           %li{class: active ? 'active' : ''}
             = link_to t(".#{key}"), link
+    = link_to "Download PDF", root_path(format: :pdf)
     / /.navbar-collapse
   / /.container-fluid

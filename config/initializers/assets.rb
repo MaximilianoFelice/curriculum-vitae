@@ -22,5 +22,7 @@ Rails.application.config.assets.precompile += %w(
   favicon-194x194.png,
   favicon-96x96.png,
   android-chrome-192x192.png,
-  favicon-16x16.png
+  favicon-16x16.png,
+  github-icon.png,
+  linkedin-icon.png
 )

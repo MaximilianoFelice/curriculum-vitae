@@ -1,6 +1,9 @@
-/ .row
-/   .col-sm-1.hidden-xs
-/   .col-sm-10.col-xs-12.profile-info
+.row
+  .col-xs-12.col-sm-6
+    = link_to image_tag('github-icon.png', class: 'ref-icon'), @user.github
+    = link_to image_tag('linkedin-icon.png', class: 'ref-icon'), @user.linkedin
+  .col-xs-12.col-sm-6.right-aligned-not-phone.email
+    = @user.email
 .profile-info
   .picture<>= image_tag @user.profile_picture_url(:show)
   / .picture

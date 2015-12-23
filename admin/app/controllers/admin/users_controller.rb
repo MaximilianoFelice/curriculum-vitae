@@ -10,7 +10,6 @@ module Admin
     end
 
     def new
-      @resource = User.find(params[:id])
       render 'users/new'
     end
   end

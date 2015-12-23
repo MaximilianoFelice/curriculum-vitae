@@ -10,7 +10,18 @@
         = @user.full_name
       .col-xs-12.col-md-4.right-aligned
         = @user.age
+    .row.secondary
+      .col-xs-12.col-sm-6
+        = @user.full_address
+      .col-xs-12.col-sm-6.right-aligned-not-phone.hidden-xs
+        = @user.present_id
+      .col-xs-12.col-sm-6
+        = @user.full_localization
+      .col-xs-12.col-sm-6.visible-xs
+        = @user.present_id
+      .col-xs-12.col-sm-6.right-aligned-not-phone
+        = @user.present_phone
     .row
-      .col-xs-12
+      .col-xs-12.description
         %p= @user.description
   / .col-sm-1.hidden-xs

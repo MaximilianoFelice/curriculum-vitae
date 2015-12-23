@@ -77,6 +77,10 @@ body{
   text-align: right;
 }
 
+.right-aligned-not-phone{
+  text-align: right;
+}
+
 .profile-info{
   display: flex;
   margin-top: 50px;
@@ -102,6 +106,17 @@ body{
       color: $secondary-color;
       font-weight: 800;
       font-size: 26px;
+    }
+
+    .secondary{
+      color: $primary-bold-color;
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .description{
+      text-align: justify;
     }
   }
 

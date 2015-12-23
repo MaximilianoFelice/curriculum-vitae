@@ -1,4 +1,4 @@
-.timeline-title= t("timeline.title.#{category}")
+.subtitle= t("timeline.title.#{category}")
 .timeline-container{id: "timeline-#{category}"}
   %br.clear
   - TimelineEntryDecorator.decorate_collection(entries).group_by{ |entry| entry.date_range }.each do |range, ranged_entries|

@@ -1,0 +1,9 @@
+- text ||= ""
+- level ||= 0
+- max_level ||= 5
+- real_width = (level.to_f / max_level.to_f) * 100
+.col-xs-6.col-sm-2
+  .meter.animate
+    %p.center.meter-text= text
+    %span{style: "width: #{real_width}%;"}
+      %span

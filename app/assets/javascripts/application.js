@@ -17,3 +17,4 @@
 //= require bootstrap-sprockets
 //= require timeliner
 //= require timeliner-initializer
+//= require progress_bar_animation

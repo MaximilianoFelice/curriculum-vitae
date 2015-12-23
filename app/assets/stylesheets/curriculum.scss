@@ -81,6 +81,10 @@ body{
   text-align: right;
 }
 
+.center{
+  text-align: center;
+}
+
 .profile-info{
   display: flex;
   margin-top: 50px;
@@ -127,8 +131,17 @@ body{
   margin: 50px 0;
 }
 
-.timeline-title{
+.subtitle{
   font-size: 24px;
   font-family: $font-family-sans-serif;
   color: $secondary-color;
+}
+
+.expertise-subtitle{
+  font-size: 19px;
+  font-weight: 600;
+  font-family: $font-family-sans-serif;
+  color: $primary-bold-color; 
+  margin-top: 10px;
+  margin-bottom: 1px;
 }

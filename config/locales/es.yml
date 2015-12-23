@@ -3,6 +3,11 @@ es:
     header:
       timeline: Timeline
       profile: Perfil
+  expertise:
+    title: Experiencia Tecnológica
+    subtitle:
+      programming: Programación
+    others: Otros
   timeline:
     title:
       education: Formación Académica

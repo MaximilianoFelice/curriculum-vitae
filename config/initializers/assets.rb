@@ -24,5 +24,6 @@ Rails.application.config.assets.precompile += %w(
   android-chrome-192x192.png,
   favicon-16x16.png,
   github-icon.png,
-  linkedin-icon.png
+  linkedin-icon.png,
+  graduation-hat.png
 )

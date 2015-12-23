@@ -69,6 +69,26 @@ body{
 
 
 /* Curriculum specific */
+.flexy{
+  display: flex;
+  align-items: center;
+}
+
+.fixed-flexy-image{
+  flex: 1;
+  min-width: 120px;
+  max-width: 120px;
+
+  > img {
+    width: 80px;
+    border-radius: 50%;
+  }
+}
+
+.flexy-container{
+  flex: 6;
+}
+
 .page-body{
   margin: 0 10%;
 }

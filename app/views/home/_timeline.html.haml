@@ -1,5 +1,6 @@
 .subtitle= t("timeline.title.#{category.underscore}", default: category)
-.timeline-container{id: "timeline-#{category.underscore}"}
+- category_named = category.split(' ').join('-').downcase.gsub(/[^0-9a-z ]/i, '')
+.timeline-container{id: "timeline-#{category_named}"}
   %br.clear
   - TimelineEntryDecorator.decorate_collection(entries).group_by{ |entry| entry.date_range }.each do |range, ranged_entries|
     .timeline-wrapper

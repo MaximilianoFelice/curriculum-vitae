@@ -9,6 +9,12 @@ class TimelineEntry < ActiveRecord::Base
   # => Associations
   #
   belongs_to :user
+
+  def orderable_criteria
+    return year if year.present?
+    return to.year if to.present?
+    return from.year if from.present?
+  end
   
   private
 

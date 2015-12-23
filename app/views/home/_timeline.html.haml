@@ -1,5 +1,5 @@
-.subtitle= t("timeline.title.#{category}", default: category)
-.timeline-container{id: "timeline-#{category}"}
+.subtitle= t("timeline.title.#{category.underscore}", default: category)
+.timeline-container{id: "timeline-#{category.underscore}"}
   %br.clear
   - TimelineEntryDecorator.decorate_collection(entries).group_by{ |entry| entry.date_range }.each do |range, ranged_entries|
     .timeline-wrapper
@@ -7,7 +7,7 @@
         .col-xs-4
           %h2.timeline-time= range
         .col-xs-8
-          - ranged_entries.each_with_index do |entry, index|
+          - ranged_entries.sort_by(&:orderable_criteria).each_with_index do |entry, index|
             - index += 1
             %dl.timeline-series
               %dt.timeline-event{id: "event#{index + 1}"}

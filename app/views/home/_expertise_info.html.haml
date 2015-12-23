@@ -3,5 +3,5 @@
   .row
     .col-xs-12
       .expertise-subtitle= t("expertise.subtitle.#{category}", default: category)
-    - entries.each do |entry|
+    - entries.sort_by{ |e| e.rating.level }.reverse.each do |entry|
       = render "shared/progress", text: entry.label, level: entry.rating.level

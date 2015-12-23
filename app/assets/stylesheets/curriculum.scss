@@ -49,13 +49,13 @@ body{
 }
 
 .navbar-default .navbar-nav > li.active{
-  border-top: 6px solid #C9C9CA;
+  border-top: 6px solid $secondary-color;
   margin-top: 0px;
 }
 
 .navbar-default .navbar-nav > li:hover{
   @include transition(0.5);
-  border-top: 6px solid #C9C9CA;
+  border-top: 6px solid $secondary-color;
   margin-top: 0px;
 }
 
@@ -99,7 +99,7 @@ body{
     margin: 0 35px;
 
     .user{
-      color: #B0B0B0;
+      color: $secondary-color;
       font-weight: 800;
       font-size: 26px;
     }
@@ -110,4 +110,10 @@ body{
 .separator{
   border-bottom: 2px solid #E7E7E7;
   margin: 50px 0;
+}
+
+.timeline-title{
+  font-size: 24px;
+  font-family: $font-family-sans-serif;
+  color: $secondary-color;
 }

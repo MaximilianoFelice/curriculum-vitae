@@ -22,7 +22,7 @@
 .timeline-wrapper {
   clear: left;
   float: left;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
   // width: 900px;
   width: 100%;
 }
@@ -30,7 +30,7 @@
   background: image-url('timeline_century_tick.gif') left center no-repeat;
   font-family: $font-family-sans-serif;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 400;
   margin: 0 0 10px;
   padding: 4px 4px 4px 20px;
@@ -64,7 +64,7 @@
   white-space: nowrap;
 }
 .timeline-series dt a {
-  color: #B0B0B0;
+  color: $primary-color;
   cursor: pointer;
 }
 .timeline-series dt a .closed {

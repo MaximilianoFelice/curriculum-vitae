@@ -2,6 +2,6 @@
 - @user.expertise_entries.group_by(&:category).each do |category, entries|
   .row
     .col-xs-12
-      .expertise-subtitle= t("expertise.subtitle.#{category}", category)
+      .expertise-subtitle= t("expertise.subtitle.#{category}", default: category)
     - entries.each do |entry|
       = render "shared/progress", text: entry.label, level: entry.rating.level

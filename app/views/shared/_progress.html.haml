@@ -5,5 +5,5 @@
 .col-xs-6.col-sm-2
   .meter.animate
     %p.center.meter-text= text
-    %span{style: "width: #{real_width}%;"}
+    %span{data: {width_percentage: real_width.to_i}}
       %span

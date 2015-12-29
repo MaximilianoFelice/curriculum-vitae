@@ -7,3 +7,17 @@ $primary-bold-color: #C9C9CA;
 $primary-bolder-color: #6F6F6F;
 
 $secondary-color: #106F00;
+
+@mixin flex-display{
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($value){
+  -webkit-box-flex: $value;
+  -webkit-flex: $value;
+  -ms-flexbox: $value;
+  flex: $value;
+}

@@ -70,12 +70,12 @@ body{
 
 /* Curriculum specific */
 .flexy{
-  display: flex;
+  @include flex-display;
   align-items: center;
 }
 
 .fixed-flexy-image{
-  flex: 1;
+  @include flex(1);
   min-width: 120px;
   max-width: 120px;
 
@@ -86,7 +86,7 @@ body{
 }
 
 .flexy-container{
-  flex: 6;
+  @include flex(6);
 }
 
 .page-body{
@@ -118,13 +118,13 @@ body{
 }
 
 .profile-info{
-  display: flex;
+  @include flex-display;
   margin-top: 50px;
   margin-bottom: 50px;
 
   .picture{
     overflow: hidden;
-    flex: 1;
+    @include flex(1);
     height: 175px;
     width: 175px;
     min-width: 175px;
@@ -134,9 +134,13 @@ body{
   }
   
   .info{
-    flex: 4;
+    @include flex(6);
     font-family: $font-family-sans-serif;
     margin: 0 35px;
+
+    p{
+      margin: 0;
+    }
 
     .user{
       color: $secondary-color;

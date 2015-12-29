@@ -166,6 +166,9 @@ body{
   border-bottom: 2px solid #E7E7E7;
   margin: 50px 0;
 }
+.separator:last-of-type{
+  display: none;
+}
 
 .subtitle{
   font-size: 24px;

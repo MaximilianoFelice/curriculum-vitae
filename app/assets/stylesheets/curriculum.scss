@@ -227,3 +227,26 @@ body{
 .avoid-break-inside{
   page-break-inside: avoid;
 }
+
+/* Responsiveness */
+
+/* Less than LG */
+@media only screen and (max-width: 1170px) { 
+  .no-flexy-mobile{ display: block; }
+}
+
+/* Less than MD */
+@media only screen and (max-width: 991px) { 
+  .center-sm{ text-align: center; }
+  .right-aligned-not-phone{text-align: inherit;}
+}
+
+/* Less than XS */
+@media only screen and (max-width: 769px) { 
+  .profile-info{ 
+    @include flex-direction(column); 
+    .info{
+      margin: 15px 0 0 0;
+    }
+  }
+}

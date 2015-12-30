@@ -26,3 +26,10 @@ $secondary-color: #106F00;
   -ms-flexbox: $value;
   flex: $value;
 }
+
+@mixin flex-direction($value){
+  -webkit-box-flex-direction: $value;
+  -webkit-flex-direction: $value;
+  -ms-flexbox-direction: $value;
+  flex-direction: $value;
+}

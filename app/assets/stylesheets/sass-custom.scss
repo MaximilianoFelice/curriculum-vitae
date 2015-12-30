@@ -15,6 +15,11 @@ $secondary-color: #106F00;
   display: flex;
 }
 
+@mixin align-items($value: center){
+  -webkit-align-items: $value; /* Safari 7.0+ */
+  align-items: $value;
+}
+
 @mixin flex($value){
   -webkit-box-flex: $value;
   -webkit-flex: $value;

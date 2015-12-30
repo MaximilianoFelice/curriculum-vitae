@@ -36,4 +36,8 @@ class UserDecorator < Draper::Decorator
   def present_id
     I18n.t('user.present_id', id: self.national_id)
   end
+
+  def trimmed_linkedin
+    URI(self.linkedin).path
+  end
 end

@@ -3,3 +3,15 @@
 .separator{
   margin: 30px 100px;
 }
+
+.meter{
+  @extend .nostripes;
+}
+
+.visible-pdf{
+  display: inherit !important;
+}
+
+.hidden-pdf{
+  display: none;
+}

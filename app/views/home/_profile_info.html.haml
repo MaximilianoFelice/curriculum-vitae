@@ -1,11 +1,11 @@
-.row
-  .col-xs-12.col-sm-6
-    = image_tag 'github-icon.png', class: 'ref-icon'
-    = image_tag 'linkedin-icon.png', class: 'ref-icon'
+.row.flexy
+  .col-xs-12.col-sm-8.flexy-8
+    = link_to image_tag('github-icon.png', class: 'ref-icon hidden-pdf'), @user.github
+    = link_to @user.linkedin do
+      %span= image_tag('linkedin-icon.png', class: 'ref-icon')
+      %p.visible-pdf.secondary-text= @user.trimmed_linkedin
 
-  / = link_to image_tag('github-icon.png', class: 'ref-icon'), @user.github
-  / = link_to image_tag('linkedin-icon.png', class: 'ref-icon'), @user.linkedin
-  .col-xs-12.col-sm-6.right-aligned-not-phone.email
+  .col-xs-12.col-sm-4.right-aligned-not-phone.secondary-text.flexy-4
     = @user.email
 .profile-info
   .picture<>= image_tag @user.profile_picture_url(:show)

@@ -3,6 +3,10 @@ body{
   background: #b9babe image-url("body-bg.png") repeat;
 }
 
+.visible-pdf{
+  display: none !important;
+}
+
 /* Bootstrap modifiers */
 .container{
   margin: 0 auto;
@@ -71,41 +75,55 @@ body{
 /* Curriculum specific */
 .flexy{
   @include flex-display;
-  align-items: center;
+  @include align-items(center);
 }
 
-.fixed-flexy-image{
-  @include flex(1);
-  min-width: 120px;
-  max-width: 120px;
+.flexy-1{ @include flex(1); }
+.flexy-2{ @include flex(2); }
+.flexy-3{ @include flex(3); }
+.flexy-4{ @include flex(4); }
+.flexy-5{ @include flex(5); }
+.flexy-6{ @include flex(6); }
+.flexy-7{ @include flex(7); }
+.flexy-8{ @include flex(8); }
+.flexy-9{ @include flex(9); }
+.flexy-10{ @include flex(10); }
+.flexy-11{ @include flex(11); }
+.flexy-12{ @include flex(12); }
 
+/* Abstract class */
+.fixed-flexy-image{
+  @extend .flexy-1;
   > img {
-    width: 80px;
     border-radius: 50%;
   }
 }
 
-.flexy-container{
-  @include flex(6);
+@mixin flexy-image($width: 120px, $img-width: 80px, $img-height: $img-width){
+  @extend .fixed-flexy-image;
+  min-width: $width;
+  max-width: $width;
+  width: $width;
+  height: $img-height;
+
+  > img {
+    width: $img-width;
+    height: $img-height;
+  }
 }
 
-.page-body{
-  margin: 0 10%;
-}
+.flexy-image-120{ @include flexy-image(120px, 80px); }
 
-.right-aligned{
-  text-align: right;
-}
+.page-body{ margin: 0 10%; }
 
-.right-aligned-not-phone{
-  text-align: right;
-}
+.right-aligned{ text-align: right; }
 
-.center{
-  text-align: center;
-}
+.right-aligned-not-phone{ text-align: right; }
 
-.email{
+.center{ text-align: center; }
+
+.secondary-text{
+  display: inline-block;
   color: $primary-bolder-color;
   font-family: $font-family-sans-serif;
   font-weight: 400;
@@ -118,29 +136,25 @@ body{
 }
 
 .profile-info{
-  @include flex-display;
+  @extend .flexy;
   margin-top: 50px;
   margin-bottom: 50px;
 
   .picture{
+    @include flexy-image(175px, 175px);
     overflow: hidden;
-    @include flex(1);
-    height: 175px;
-    width: 175px;
-    min-width: 175px;
-    max-width: 175px;
     border-radius: 50%;
     @include box-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  }
+
+  p{
+    margin: 0;
   }
   
   .info{
     @include flex(6);
     font-family: $font-family-sans-serif;
     margin: 0 35px;
-
-    p{
-      margin: 0;
-    }
 
     .user{
       color: $secondary-color;
@@ -155,9 +169,7 @@ body{
       margin-bottom: 10px;
     }
 
-    .description{
-      text-align: justify;
-    }
+    .description{ text-align: justify; }
   }
 
 }
@@ -166,9 +178,7 @@ body{
   border-bottom: 2px solid #E7E7E7;
   margin: 50px 0;
 }
-.separator:last-of-type{
-  display: none;
-}
+.separator:last-of-type{ display: none; }
 
 .subtitle{
   font-size: 24px;

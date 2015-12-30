@@ -1,0 +1,7 @@
+.secondary-text
+  %p=t('under-construction.but_html', href: link_to("xkcd", XKCD.url))
+
+- xkcd = XKCD.random_comic
+.center.xkcd
+  .title= xkcd.safe_title
+  .image= image_tag xkcd.img, title: xkcd.alt

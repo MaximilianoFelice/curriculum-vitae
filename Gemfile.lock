@@ -73,6 +73,8 @@ GEM
     csv_builder (2.1.1)
       actionpack (>= 3.0.0)
     debug_inspector (0.0.2)
+    domain_name (0.5.25)
+      unf (>= 0.0.5, < 1.0.0)
     draper (2.1.0)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
@@ -95,6 +97,8 @@ GEM
       selectize-rails (~> 0.12.0)
     haml (4.0.7)
       tilt
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
@@ -116,6 +120,7 @@ GEM
     momentjs-rails (2.10.6)
       railties (>= 3.1)
     multi_json (1.11.2)
+    netrc (0.11.0)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
@@ -166,6 +171,10 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
     request_store (1.2.1)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     sass (3.4.20)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -196,6 +205,9 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -225,6 +237,7 @@ DEPENDENCIES
   pry-stack_explorer
   rails (= 4.2.5)
   rails_12factor
+  rest-client
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

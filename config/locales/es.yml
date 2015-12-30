@@ -18,6 +18,8 @@ es:
       without_limit: "%{year} - Actualidad"
   profile-info:
     see-live-version: "Accede a una versión en vivo de este CV en: %{url}"
+  under-construction:
+    but_html: "Esta sección aún se encuentra en construcción... Pero mientras tanto, te invito a que leas algo de %{href}:"
   user:
     present_id: "DNI: %{id}"
   godmin:

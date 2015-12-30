@@ -51,6 +51,9 @@ gem 'mini_magick'
 # Decorators
 gem 'draper'
 
+# Easy HTTP requests
+gem 'rest-client'
+
 # PDF Converter
 gem 'wicked_pdf'
 # gem 'wkhtmltopdf-binary'

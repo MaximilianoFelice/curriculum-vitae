@@ -16,6 +16,8 @@ es:
     date_range:
       with_limit: "%{lower} - %{upper}"
       without_limit: "%{year} - Actualidad"
+  profile-info:
+    see-live-version: "Accede a una versión en vivo de este CV en: %{url}"
   user:
     present_id: "DNI: %{id}"
   godmin:

@@ -25,5 +25,6 @@ Rails.application.config.assets.precompile += %w(
   favicon-16x16.png,
   github-icon.png,
   linkedin-icon.png,
-  graduation-hat.png
+  graduation-hat.png,
+  pdf_icon.ico
 )

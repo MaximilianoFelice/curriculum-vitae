@@ -3,6 +3,7 @@ es:
     header:
       timeline: Timeline
       profile: Perfil
+      pdf_download: Descargar en PDF
   expertise:
     title: Experiencia Tecnológica
     subtitle:

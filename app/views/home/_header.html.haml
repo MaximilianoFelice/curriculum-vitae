@@ -9,11 +9,15 @@
         %span.icon-bar
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav
+      %ul.nav.navbar-nav.hoverable
         - {timeline: root_path, profile: profile_path}.each do |key, link|
           - active = current_page?(link)
           %li{class: active ? 'active' : ''}
             = link_to t(".#{key}"), link
-    = link_to "Download PDF", root_path(format: :pdf)
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to root_path(format: :pdf), class: "btn btn-default navbar-btn btn-pdf" do
+            = t('.pdf_download')
+            = image_tag 'pdf_icon.ico', class: 'mini-icon margin-left-5'
     / /.navbar-collapse
   / /.container-fluid

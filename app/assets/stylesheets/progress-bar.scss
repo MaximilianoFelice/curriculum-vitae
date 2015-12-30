@@ -21,6 +21,10 @@ $pb-span-right-border-radius: 4px;
   box-shadow        : $pb-box-shadow;
 }
 .meter-text{
+  // text-overflow: ellipsis; /* Toggle '...' on text */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
   color: #FEFEFE;
   font-weight: 600;
   font-family: $font-family-sans-serif;

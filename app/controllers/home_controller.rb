@@ -10,7 +10,8 @@ class HomeController < ApplicationController
                           formats: [:html], 
                           encoding: 'UTF-8', 
                           viewport_size: '1280x1024', 
-                          javascript_delay: 2000}
+                          javascript_delay: 2000
+                        }
     end
   end
 

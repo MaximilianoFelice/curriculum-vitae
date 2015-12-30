@@ -16,7 +16,7 @@
             = link_to t(".#{key}"), link
       %ul.nav.navbar-nav.navbar-right
         %li
-          = link_to root_path(format: :pdf), class: "btn btn-default navbar-btn btn-pdf" do
+          = link_to root_path(format: :pdf), class: "btn btn-default navbar-btn btn-pdf", target: "_blank" do
             = t('.pdf_download')
             = image_tag 'pdf_icon.ico', class: 'mini-icon margin-left-5'
     / /.navbar-collapse

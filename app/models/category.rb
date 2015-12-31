@@ -30,6 +30,6 @@ class Category < ActiveRecord::Base
   end
 
   def to_s
-    "#{self.title} - #{self.category_type}"
+    self.title
   end
 end

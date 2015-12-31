@@ -256,7 +256,7 @@ body{
 
   .secondary-xs{ @include secondary; }
 
-  .timeline-wrapper h2{ font-size: 1.2em !important; }
+  .timeline-wrapper h2{ font-size: 1em !important; }
 
   .timeline-series{ margin-left: 24px !important; }
 
@@ -272,6 +272,12 @@ body{
     margin-bottom: 0 !important;
     line-height: 1.3em !important;
   }
+
+  .user{ font-size: 21px !important; }
+  .description{ font-size: 15px !important; }
+  .secondary-text{ font-size: 17px !important; }
+  .subtitle{ font-size: 20px !important; }
+  .meter-text{ font-size: 11px !important; }
 }
 
 @media screen and (max-width: 768px){

@@ -4,4 +4,4 @@
 - xkcd = XKCD.random_comic
 .center.xkcd
   .title= xkcd.safe_title
-  .image= image_tag xkcd.img, title: xkcd.alt
+  .image= image_tag xkcd.img, title: xkcd.alt, class: 'popup', data: {"mfp-src" => xkcd.img}

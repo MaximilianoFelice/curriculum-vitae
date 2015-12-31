@@ -226,6 +226,8 @@ body{
     font-weight: 500;
     text-decoration: none;
   }
+
+  .image > img{ max-width: 100%; }
 }
 
 .avoid-break-inside{
@@ -278,10 +280,4 @@ body{
   .secondary-text{ font-size: 17px !important; }
   .subtitle{ font-size: 20px !important; }
   .meter-text{ font-size: 11px !important; }
-}
-
-@media screen and (max-width: 768px){
-  *{
-    max-width: none !important;
-  }
 }

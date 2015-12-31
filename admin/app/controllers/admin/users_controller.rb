@@ -6,11 +6,11 @@ module Admin
 
     def edit
       @resource = User.find(params[:id])
-      render 'users/new'
+      render 'extended/new'
     end
 
     def new
-      render 'users/new'
+      render 'extended/new'
     end
   end
 end

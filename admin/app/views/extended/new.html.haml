@@ -6,6 +6,10 @@
   - @resource_service.attrs_for_form.each do |attribute|
     - if f.object.send(attribute.to_sym).is_a?(CarrierWave::Uploader::Base)
       = f.file_field attribute
+    - elsif attribute == :category
+      = f.select :category_id, Category.where(category_type: @resource.class.to_s).map{ |c| [c.to_s, c.id]}
+    - elsif attribute == :category_type
+      = f.select attribute, Category.types
     - elsif f.object.class.reflect_on_association(attribute)
       = f.association attribute
     - else

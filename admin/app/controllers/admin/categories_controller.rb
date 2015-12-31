@@ -1,10 +1,10 @@
 require_dependency "admin/application_controller"
 
 module Admin
-  class TimelineEntriesController < ApplicationController
+  class CategoriesController < ApplicationController
     include Godmin::Resources::ResourceController
     def edit
-      @resource = TimelineEntry.find(params[:id])
+      @resource = Category.find(params[:id])
       render 'extended/new'
     end
 

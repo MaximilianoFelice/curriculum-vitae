@@ -175,7 +175,7 @@ body{
   .info{
     @include flex(6);
     font-family: $font-family-sans-serif;
-    margin: 0 35px;
+    margin: 0 0 0 35px;
 
     .user{
       color: $secondary-color;

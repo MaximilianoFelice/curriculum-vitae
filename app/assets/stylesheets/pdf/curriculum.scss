@@ -15,3 +15,13 @@
 .hidden-pdf{
   display: none;
 }
+
+/* Unvelibably, this is what forces the PDF to get a certain width */
+.page-body{ 
+  width: 900px; 
+  margin: 0;
+  padding: 0 5%;
+}
+// body{ width: 1280px; }
+// .timeline-series { width: 880px; }
+// .timeline-event-content p { width: 500px; }

@@ -1,8 +1,9 @@
 .subtitle= t("timeline.title.#{category.underscore}", default: category)
 - category_named = category.split(' ').join('-').downcase.gsub(/[^0-9a-z ]/i, '')
 .flexy
-  .flexy-image-120.hidden-sm.hidden-xs.hidden-pdf
-    = image_tag "graduation-hat.png"
+  - unless picture.blank?
+    .flexy-image-120.hidden-sm.hidden-xs.hidden-pdf
+      = image_tag picture
   .flexy-6
     .timeline-container{id: "timeline-#{category_named}"}
       %br.clear

@@ -3,7 +3,7 @@
 .avoid-break-inside
   = render 'home/expertise_info'
   .separator
-- @user.timeline_entries.group_by(&:category).each do |category, entries| 
+- Category.where(category_type: TimelineEntry.to_s).each do |category| 
   .avoid-break-inside
-    = render 'home/timeline', entries: entries, category: category
+    = render 'home/timeline', entries: category.timeline_entries, category: category.title, picture: category.picture_url(:little)
     .separator

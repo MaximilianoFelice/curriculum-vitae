@@ -8,7 +8,8 @@ class Category < ActiveRecord::Base
   #
   # => Relations
   #
-  has_many :entries
+  has_many :expertise_entries
+  has_many :timeline_entries
 
   #
   # => Images

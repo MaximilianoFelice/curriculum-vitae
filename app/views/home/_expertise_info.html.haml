@@ -1,7 +1,7 @@
 .subtitle= t('expertise.title')
-- @user.expertise_entries.group_by(&:category).each do |category, entries|
+- Category.where(category_type: ExpertiseEntry.to_s).each do |category|
   .row
     .col-xs-12
-      .expertise-subtitle= t("expertise.subtitle.#{category}", default: category)
-    - entries.sort_by{ |e| e.rating.level }.reverse.each do |entry|
+      .expertise-subtitle= t("expertise.subtitle.#{category.title.to_s}", default: category)
+    - category.expertise_entries.sort_by{ |e| e.rating.level }.reverse.each do |entry|
       = render "shared/progress", text: entry.label, level: entry.rating.level

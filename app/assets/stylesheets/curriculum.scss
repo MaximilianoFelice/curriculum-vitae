@@ -255,4 +255,27 @@ body{
   .center-xs{ text-align: center; }
 
   .secondary-xs{ @include secondary; }
+
+  .timeline-wrapper h2{ font-size: 1.2em !important; }
+
+  .timeline-series{ margin-left: 24px !important; }
+
+  .timeline-series dt{
+    white-space: normal !important;
+    line-height: 0.6em !important;
+  }
+
+  .timeline-series dt a{ font-size: 0.55em !important; }
+
+  .timeline-event-content p{
+    font-size: 13px !important;
+    margin-bottom: 0 !important;
+    line-height: 1.3em !important;
+  }
+}
+
+@media screen and (max-width: 768px){
+  *{
+    max-width: none !important;
+  }
 }

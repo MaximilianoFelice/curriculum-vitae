@@ -1,7 +1,7 @@
 .subtitle= t("timeline.title.#{category.underscore}", default: category)
 - category_named = category.split(' ').join('-').downcase.gsub(/[^0-9a-z ]/i, '')
 .flexy
-  .flexy-image-120.hidden-sm.hidden-pdf
+  .flexy-image-120.hidden-sm.hidden-xs.hidden-pdf
     = image_tag "graduation-hat.png"
   .flexy-6
     .timeline-container{id: "timeline-#{category_named}"}
@@ -9,9 +9,9 @@
       - TimelineEntryDecorator.decorate_collection(entries).group_by{ |entry| entry.date_range }.each do |range, ranged_entries|
         .timeline-wrapper
           .row
-            .col-xs-4
+            .col-xs-12.col-sm-4
               %h2.timeline-time= range
-            .col-xs-8
+            .col-xs-12.col-sm-8
               - ranged_entries.sort_by(&:orderable_criteria).each_with_index do |entry, index|
                 - entry_named = entry.title.split(' ').join('-').downcase.gsub(/[^0-9a-z ]/i, '')
                 %dl.timeline-series

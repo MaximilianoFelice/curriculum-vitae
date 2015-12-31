@@ -95,6 +95,7 @@
   display: none;
 }
 .timeline-event-content p {
+  word-wrap: break-word;
   clear: left;
   float: left;
   line-height: 1.5em;

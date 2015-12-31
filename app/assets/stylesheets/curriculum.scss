@@ -149,11 +149,15 @@ body{
   height: 64px;
 }
 
-.secondary{
+/* Fix for interpolation in other devices */
+@mixin secondary(){
   color: $primary-bold-color;
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 10px;
+}
+.secondary{
+  @include secondary;
 }
 
 .profile-info{
@@ -245,8 +249,10 @@ body{
 @media only screen and (max-width: 769px) { 
   .profile-info{ 
     @include flex-direction(column); 
-    .info{
-      margin: 15px 0 0 0;
-    }
+    .info{ margin: 15px 0 0 0; }
   }
+
+  .center-xs{ text-align: center; }
+
+  .secondary-xs{ @include secondary; }
 }

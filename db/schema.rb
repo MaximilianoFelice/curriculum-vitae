@@ -11,18 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222070300) do
+ActiveRecord::Schema.define(version: 20151231034325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: :cascade do |t|
+    t.string "picture"
+    t.string "title"
+    t.string "category_type"
+  end
+
   create_table "expertise_entries", force: :cascade do |t|
-    t.string   "label",      null: false
-    t.integer  "rating_id",  null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "category"
+    t.string   "label",       null: false
+    t.integer  "rating_id",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.integer  "category_id"
   end
 
   add_index "expertise_entries", ["rating_id"], name: "index_expertise_entries_on_rating_id", using: :btree
@@ -36,15 +42,15 @@ ActiveRecord::Schema.define(version: 20151222070300) do
   end
 
   create_table "timeline_entries", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.text     "content",    null: false
+    t.string   "title",       null: false
+    t.text     "content",     null: false
     t.date     "from"
     t.date     "to"
     t.integer  "year"
-    t.string   "category",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.integer  "category_id"
   end
 
   create_table "users", force: :cascade do |t|

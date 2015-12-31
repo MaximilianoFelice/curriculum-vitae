@@ -9,6 +9,8 @@ class TimelineEntry < ActiveRecord::Base
   # => Associations
   #
   belongs_to :user
+  belongs_to :category, ->{ where(category_type: 'TimelineEntry') }
+
 
   def orderable_criteria
     return year if year.present?

@@ -23,3 +23,6 @@
 # Ignore uploads
 /public/uploads
 /public/source_maps
+
+# DB Dumps
+*.dump

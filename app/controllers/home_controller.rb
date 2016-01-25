@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
-    mixpanel.track('Home view')
+    mixpanel.track('Home View') if request.format.html?
+    mixpanel.track('PDF Render') if request.format.pdf?
 
     @user = User.first.decorate
     respond_to do |format|
@@ -18,6 +19,8 @@ class HomeController < ApplicationController
   end
 
   def profile
+    mixpanel.track('Profile View')
+
     @user = User.first.decorate
   end
 end

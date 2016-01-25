@@ -55,7 +55,8 @@ gem 'draper'
 gem 'rest-client'
 
 # PDF Converter
-gem 'wicked_pdf'
+gem 'wicked_pdf', github: "mileszs/wicked_pdf", branch: "master"
+
 # gem 'wkhtmltopdf-binary'
 gem 'wkhtmltopdf-heroku'
 

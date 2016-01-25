@@ -14,8 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require i18n/translations
+//= require js-routes
 //= require bootstrap-sprockets
 //= require timeliner
 //= require timeliner-initializer
 //= require progress_bar_animation
 //= require magnific-popup
+//= require mantenience-info

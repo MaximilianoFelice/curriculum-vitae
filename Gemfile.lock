@@ -100,6 +100,8 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
+    i18n-js (3.0.0.rc12)
+      i18n (~> 0.6, >= 0.6.6)
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -107,6 +109,9 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    js-routes (1.2.2)
+      railties (>= 3.2)
+      sprockets-rails
     json (1.8.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -230,8 +235,10 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   draper
   haml
+  i18n-js (>= 3.0.0.rc11)
   jbuilder (~> 2.0)
   jquery-rails
+  js-routes
   magnific-popup-rails
   mini_magick
   pg

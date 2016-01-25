@@ -34,6 +34,12 @@ Rails.application.routes.draw do
 
   get 'profile' => 'home#profile'
 
+  resource :info, controller: 'info' do
+    get :development_mode
+  end
+
+  # get 'info/development_mode' => 'info#development_mode'
+  
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

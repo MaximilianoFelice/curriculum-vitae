@@ -55,6 +55,9 @@ gem 'draper'
 gem 'rest-client'
 
 # PDF Converter
+# Need to keep it like this until any new version is released in where
+# https://github.com/mileszs/wicked_pdf/commit/a544ba92132a3dbcdc1657d71f17b784629d2567
+# has been merged.
 gem 'wicked_pdf', github: "mileszs/wicked_pdf", branch: "master"
 
 # gem 'wkhtmltopdf-binary'

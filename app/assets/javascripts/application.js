@@ -22,3 +22,4 @@
 //= require progress_bar_animation
 //= require magnific-popup
 //= require mantenience-info
+//= require heatmap.js

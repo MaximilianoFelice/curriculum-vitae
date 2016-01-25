@@ -1,7 +1,7 @@
 es:
   mantenience:
     message: ¡Estamos en mantenimiento! Podríamos estar funcionando más lento o con algunos errores.
-    short_message:
+    short_message: ¡Estamos en mantenimiento!
   home:
     header:
       timeline: Timeline

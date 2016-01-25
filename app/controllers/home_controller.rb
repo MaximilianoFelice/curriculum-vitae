@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
+    mixpanel.track('Home view')
+
     @user = User.first.decorate
     respond_to do |format|
       format.html

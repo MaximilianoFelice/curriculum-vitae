@@ -7,6 +7,10 @@ body{
   display: none !important;
 }
 
+.hidden{
+  display: none !important;
+}
+
 /* Bootstrap modifiers */
 .container{
   margin: 0 auto;
@@ -280,4 +284,21 @@ body{
   .secondary-text{ font-size: 17px !important; }
   .subtitle{ font-size: 20px !important; }
   .meter-text{ font-size: 11px !important; }
+}
+
+/* Mantenience info bar */
+.mantenience-info{
+  background-color: #EAD965;
+  padding: 2px 0;
+
+  .close-msg{
+    position: relative;
+    float: right;
+    top: -22px;
+    padding: 2px 11px;
+    cursor: pointer;
+  }
+  .close-msg:before{
+    content: 'x';
+  }
 }

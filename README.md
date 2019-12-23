@@ -1,28 +1,13 @@
-== README
+# Curriculum Vitae
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Deploy
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Environment setup
+1. Install Ruby (this uses rvm) `rvm install <version-on-file>`
+2. Install Heroku (you might want to deploy this on any other thing, that's ok) `brew tap heroku/brew && brew install heroku`
+3. Create Heroku app: `heroku create --remote heroku-18 --stack heroku-18 <your app name with heroku-18 appended>`
+4. Create Heroku remote: `heroku create` (https://devcenter.heroku.com/articles/git#creating-a-heroku-remote)
+
+## Upgrading stack in Heroku
+https://devcenter.heroku.com/articles/upgrading-to-the-latest-stack
